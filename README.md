@@ -1,22 +1,67 @@
-# DIO - Trilha .NET - Programação orientada a objetos
-www.dio.me
+# Desafio de Projeto: Sistema de Smartphones
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de orientação a objetos, da trilha .NET da DIO.
+Este é um projeto de console em .NET que demonstra os conceitos de **Programação Orientada a Objetos (POO)**, especificamente **herança** e **polimorfismo**, ao modelar um sistema de celulares com as marcas **Nokia** e **iPhone**.
 
-## Contexto
-Você é responsável por modelar um sistema que trabalha com celulares. Para isso, foi solicitado que você faça uma abstração de um celular e disponibilize maneiras de diferentes marcas e modelos terem seu próprio comportamento, possibilitando um maior reuso de código e usando a orientação a objetos.
+## 🎯 Objetivo
 
-## Proposta
-Você precisa criar um sistema em .NET, do tipo console, mapeando uma classe abstrata e classes específicas para dois tipos de celulares: Nokia e iPhone. 
-Você deve criar as suas classes de acordo com o diagrama abaixo:
+Modelar um sistema onde uma classe abstrata `Smartphone` serve como base para diferentes marcas de celulares. As classes filhas `Nokia` e `Iphone` herdam da classe base e sobrescrevem o método `InstalarAplicativo` para fornecer comportamentos específicos de cada marca.
 
-![Diagrama classes](Imagens/diagrama.png)
+## 📐 Diagrama UML
 
-## Regras e validações
-1. A classe **Smartphone** deve ser abstrata, não permitindo instanciar e servindo apenas como modelo.
-2. A classe **Nokia** e **Iphone** devem ser classes filhas de Smartphone.
-3. O método **InstalarAplicativo** deve ser sobrescrito na classe Nokia e iPhone, pois ambos possuem diferentes maneiras de instalar um aplicativo.
+A estrutura do projeto segue o diagrama UML abaixo:
 
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+![Diagrama UML do Sistema de Smartphones](Imagens/diagrama.png)
+
+## 🗂️ Estrutura do Projeto
+
+```
+trilha-net-poo-desafio/
+├── Imagens/
+│   └── diagrama.png         
+├── Models/
+│   ├── Smartphone.cs        
+│   ├── Nokia.cs             
+│   └── Iphone.cs             
+├── .gitignore               
+├── Program.cs               
+├── DesafioPOO.csproj         
+└── README.md                
+```
+
+## ▶️ Como Executar
+
+1. Certifique-se de ter o **SDK .NET** instalado.
+2. Abra o terminal na pasta do projeto.
+3. Execute o comando abaixo para compilar e rodar:
+
+```bash
+dotnet run
+```
+
+## 🖥️ Resultado Esperado
+
+Ao executar o programa, você verá no console as mensagens de teste para ambos os tipos de celular:
+
+```
+Testando o Nokia:
+Ligando...
+Recebendo ligação...
+Instalando o aplicativo WhatsApp no Nokia.
+
+Testando o iPhone:
+Ligando...
+Recebendo ligação...
+Instalando o aplicativo Instagram no iPhone.
+```
+
+## 🛠️ Ferramentas de Desenvolvimento
+
+- **Linguagem**: C# (.NET 6 ou superior)
+- **IDE Recomendada**: 
+  - [Visual Studio](https://visualstudio.microsoft.com/) 💻
+  - [Visual Studio Code](https://code.visualstudio.com/) com extensão C# 🧑‍💻
+- **Gerenciador de Pacotes**: .NET CLI (`dotnet`) 📦
+
+## 📄 Licença
+
+Este projeto foi desenvolvido **exclusivamente para fins educacionais** e faz parte do desafio da trilha **[.NET da Digital Innovation One (DIO)](https://web.dio.me/)**.
